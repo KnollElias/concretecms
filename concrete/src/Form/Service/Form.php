@@ -252,6 +252,8 @@ class Form
         return '<input type="checkbox"' . $nameAndID . $this->serializeMiscFields('form-check-input', $miscFields) . ' value="' . $value . '"' . $checked . ' />';
     }
 
+    
+
     /**
      * Creates a textarea field.
      *

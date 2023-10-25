@@ -64,9 +64,9 @@ $timezone = $dateService->getTimezoneDisplayName($timezone);
         }
     } else {
         if ($scheduledVersionExists) {
-            $keepOtherScheduling = t('Keep existing scheduling. This version will go live separately.');
+            $keepOtherScheduling = t('Keep existing scheduling. This version will go live separately. OFF');
         } else {
-            $keepOtherScheduling = t('Keep live version approved.');
+            $keepOtherScheduling = t('Keep live version approved. ON');
         }
     }
     ?>
@@ -74,6 +74,9 @@ $timezone = $dateService->getTimezoneDisplayName($timezone);
     <div class="form-check form-switch">
         <?= $form->checkbox('keepOtherScheduling', 1, false) ?>
         <?= $form->label('keepOtherScheduling', $keepOtherScheduling) ?>
+    </div>
+    <div style="text-align: right">
+        <span class="form-text help-block"><?=t('Time Zone: %s', $timezone)?></span>
     </div>
 </div>
 <?php } ?>
